@@ -11,6 +11,7 @@ body {
 
 a {
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 input, button, select {
@@ -51,11 +52,24 @@ input, button, select {
         margin-top: 24px;
         margin-bottom: 48px;
     }
+
+    &__text--marker {
+        font-weight: 600;
+    }
+
     &__btn {
         background: #000;
+        border: 1px solid #000;
         color: #fff;
+        font-size: 24px;
+        font-weight: 600;
         padding: 16px 65px 16px 65px;
         border-radius: 30px;
+        transition: all 400ms;
+        &:hover {
+            background: transparent;
+            color: #000;
+        }
     }
 }
 
