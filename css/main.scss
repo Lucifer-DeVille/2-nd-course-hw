@@ -26,6 +26,7 @@ input, button, select {
 }
 
 .main {
+    position: relative;
     color: #000;
     width: 100%;
     background-color: #E1FF8F;
@@ -71,6 +72,34 @@ input, button, select {
             color: #000;
         }
     }
+
+    &__scrollbar {
+        background: #BCEC30;
+        padding: 27px 49px 30px 49px;
+        height: 90px;
+        position: absolute;
+        bottom: 0;
+        overflow: hidden;
+        max-width: 3220px;
+        display: flex;
+        gap: 51px;
+        align-items: center;
+        width: 100vw;
+    }
+
+    &__scrollbar--item {
+        display: flex;
+        align-items: center;
+        gap: 51px;
+        white-space: nowrap;
+    }
+
+    &__scrollbar--link {
+        text-transform: uppercase;
+        color: #202027;
+        font-weight: 700;
+        font-size: 30px;
+    }
 }
 
 .about {
@@ -78,10 +107,11 @@ input, button, select {
     background-image: url(../img/about-bg-left.png), url(../img/about-bg-right.png);
     background-repeat: no-repeat;
     background-size: initial;
-    background-position: bottom 34em left 15em, top 6em right 6em;
+    background-position: bottom 37em left 15em, top 6em right 6em;
     
     &__content {
         padding-top: 94px;
+        padding-bottom: 50px;
     }
     &__title {
         color: #fff;
