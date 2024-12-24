@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,51 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <section class="main">
         <div class="main__content center">
             <h1 class="main__title">
-                Добро пожаловать<br> на мой сайт мини-игр
+                Добро пожаловать
+            </h1>
+            <h1 class="main__title">
+                на мой сайт мини-игр
             </h1>
             <p class="main__text">
-                Тебе предстоит пройти несколько увлекательных игр. Если готов, нажимай <span class="main__text--marker">«Поехали!»</span> и <span class="main__text--marker">приступай</span>.
+                Тебе предстоит пройти несколько увлекательных игр. Если готов, нажимай <span
+                    class="main__text--marker">«Поехали!»</span> и <span class="main__text--marker">приступай</span>.
             </p>
             <a href="#about" class="main__btn">Поехали!</a>
-            <div class="main__scrollbar">
-                
+        </div>
+        <div class="main__scrollbar">
+            <div class="main__scrollbar-content">
+                <h3 class="main__scrollbar-game">
+                    Викторина
+                </h3>
+                <img src="img/star.svg" alt="star" class="main__scrollbar-star">
+                <h3 class="main__scrollbar-game">
+                    угадай число
+                </h3>
+                <img src="img/star.svg" alt="star" class="main__scrollbar-star">
+                <h3 class="main__scrollbar-game">
+                    Переверни текст
+                </h3>
+                <img src="img/star.svg" alt="star" class="main__scrollbar-star">
+                <h3 class="main__scrollbar-game">
+                    Простая арифметика
+                </h3>
+                <img src="img/star.svg" alt="star" class="main__scrollbar-star">
+                <h3 class="main__scrollbar-game">
+                    Камень, ножницы, бумага
+                </h3>
+                <img src="img/star.svg" alt="star" class="main__scrollbar-star">
+                <h3 class="main__scrollbar-game">
+                    Генератор случайных цветов
+                </h3>
+                <img src="img/star.svg" alt="star" class="main__scrollbar-star">
             </div>
         </div>
     </section>
@@ -31,10 +63,11 @@
                 Об играх
             </h2>
             <p class="about__text">
-                В моей коллекции представлено 6 игр на разные темы. Игры несложные — в них может поиграть каждый. Все игры доступны для пользования.
+                В моей коллекции представлено 6 игр на разные темы. Игры несложные — в них может поиграть каждый. Все
+                игры доступны для пользования.
             </p>
             <div class="about__box">
-                <div class="about__item">
+                <a class="about__item" href="#">
                     <img class="about__img" src="img/about-item1.jpeg" alt="about-item1">
                     <div class="about__info">
                         <p class="about__number">
@@ -44,8 +77,8 @@
                             Угадай число
                         </h4>
                     </div>
-                </div>
-                <div class="about__item">
+                </a>
+                <a class="about__item" href="#">
                     <img class="about__img" src="img/about-item2.jpeg" alt="about-item2">
                     <div class="about__info">
                         <p class="about__number">
@@ -55,8 +88,8 @@
                             Простая<br> арифметика
                         </h4>
                     </div>
-                </div>
-                <div class="about__item">
+                </a>
+                <a class="about__item" href="#">
                     <img class="about__img" src="img/about-item3.jpeg" alt="about-item3">
                     <div class="about__info">
                         <p class="about__number">
@@ -66,8 +99,8 @@
                             Переверни текст
                         </h4>
                     </div>
-                </div>
-                <div class="about__item">
+                </a>
+                <a class="about__item" href="#">
                     <img class="about__img" src="img/about-item4.jpeg" alt="about-item4">
                     <div class="about__info">
                         <p class="about__number">
@@ -77,8 +110,8 @@
                             Камень,<br> ножницы,<br> бумага
                         </h4>
                     </div>
-                </div>
-                <div class="about__item">
+                </a>
+                <a class="about__item" href="#">
                     <img class="about__img" src="img/about-item5.jpeg" alt="about-item5">
                     <div class="about__info">
                         <p class="about__number">
@@ -88,8 +121,8 @@
                             Простая викторина
                         </h4>
                     </div>
-                </div>
-                <div class="about__item">
+                </a>
+                <a class="about__item" href="#">
                     <img class="about__img" src="img/about-item6.jpeg" alt="about-item6">
                     <div class="about__info">
                         <p class="about__number">
@@ -99,11 +132,18 @@
                             Генератор<br> случайных<br> цветов
                         </h4>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
+    <footer class="footer">
+        <div class="footer__content center">
+            <a class="footer__privacy" href="#">Все права защищены.</a>
+        </div>
+        
+    </footer>
 
-    <script src="hw-2/script.js"></script>
+    <script src="js/hw-2.js"></script>
 </body>
+
 </html>

@@ -26,6 +26,8 @@ input, button, select {
 }
 
 .main {
+  position: relative;
+  overflow: hidden;
   color: #000;
   width: 100%;
   background-color: #E1FF8F;
@@ -33,7 +35,7 @@ input, button, select {
   background-image: url(../img/main-bg-left.png), url(../img/main-bg-right.png);
   background-repeat: no-repeat;
   background-size: inherit;
-  background-position: top 4em left 17em, top -21em right -30em;
+  background-position: top 4em left 6em, top -21em right -30em;
 }
 .main__content {
   padding-top: 196px;
@@ -60,6 +62,7 @@ input, button, select {
   color: #fff;
   font-size: 24px;
   font-weight: 600;
+  display: inline-block;
   padding: 16px 65px 16px 65px;
   border-radius: 30px;
   transition: all 400ms;
@@ -68,16 +71,33 @@ input, button, select {
   background: transparent;
   color: #000;
 }
+.main__scrollbar {
+  background: #BCEC30;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+.main__scrollbar-content {
+  display: flex;
+  font-size: 30px;
+  gap: 51px;
+  align-items: center;
+  text-transform: uppercase;
+  width: 5220px;
+  height: 90px;
+}
 
 .about {
   background-color: #202027;
   background-image: url(../img/about-bg-left.png), url(../img/about-bg-right.png);
   background-repeat: no-repeat;
   background-size: initial;
-  background-position: bottom 34em left 15em, top 6em right 6em;
+  background-position: bottom 37em left 4em, top 6em right -6em;
 }
 .about__content {
   padding-top: 94px;
+  padding-bottom: 50px;
 }
 .about__title {
   color: #fff;
@@ -94,33 +114,50 @@ input, button, select {
 .about__box {
   display: grid;
   grid-auto-rows: auto;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(6, minmax(1fr, 2fr));
-  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(5rem, 1fr));
+  gap: 1.5rem 1rem;
+  justify-items: center;
+  grid-auto-flow: dense;
+  overflow-x: hidden;
+}
+.about__link-box {
+  display: block;
 }
 .about__item {
   grid-column: span 4/auto;
   background: #fff;
-  width: 378px;
+  max-width: 378px;
   border-radius: 30px;
+  color: #202027;
 }
 .about__item:nth-child(1) {
-  grid-row: 1/3;
+  grid-row: span 7;
+  order: 1;
 }
 .about__item:nth-child(2) {
-  grid-row: 1/4;
+  grid-row: span 8;
+  order: 2;
 }
 .about__item:nth-child(3) {
-  grid-row: 1/3;
+  grid-row: span 7;
+  order: 3;
 }
 .about__item:nth-child(4) {
-  grid-row: 3/6;
+  grid-row: span 8;
+  order: 4;
 }
 .about__item:nth-child(5) {
-  grid-row: 4/6;
+  grid-row: span 7;
+  order: 6;
 }
 .about__item:nth-child(6) {
-  grid-row: 3/6;
+  grid-row: span 8;
+  order: 5;
+}
+.about__img {
+  max-width: 100%;
+  height: auto;
 }
 .about__info {
   padding: 32px 32px 36px 32px;
@@ -137,4 +174,104 @@ input, button, select {
 .about__game-title {
   font-size: 32px;
   font-weight: 700;
+}
+
+.footer {
+  background: #BCEC30;
+  height: 150px;
+  padding-top: 61px;
+}
+.footer__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__privacy {
+  font-size: 24px;
+  font-weight: 700;
+  color: #202027;
+}
+
+@media (max-width: 1260px) {
+  .center {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+@media (max-width: 1182px) {
+  .center {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+@media (max-width: 1179.6px) {
+  .about__item:nth-child(5) {
+    order: 5;
+  }
+}
+@media (max-width: 818px) {
+  .main {
+    background-image: url(../img/main-mobi-left.svg), url(../img/main-mobi-right.svg);
+    background-repeat: no-repeat;
+    background-size: inherit;
+    background-position: top 3em left 5em, top -5em right -6em;
+    text-align: center;
+    height: 700px;
+    position: relative;
+  }
+  .main__content {
+    padding-top: 147px;
+  }
+  .main__title {
+    font-size: 40px;
+  }
+  .main__text {
+    font-size: 16px;
+    margin-bottom: 36px;
+  }
+  .main__scrollbar {
+    height: 51.5px;
+  }
+  .main__scrollbar-content {
+    font-size: 18px;
+    gap: 27.5px;
+  }
+  .main__scrollbar-star {
+    width: 19.5px;
+    height: 19.5px;
+  }
+  .main__btn {
+    position: relative;
+    padding: 16px 103px 16px 103px;
+  }
+  .main__btn::after {
+    content: "";
+    position: absolute;
+    background-image: url(../img/main-mobi-bottom.svg);
+    background-repeat: no-repeat;
+    background-size: inherit;
+    height: 64px;
+    width: 70px;
+    bottom: -55px;
+    right: 0;
+  }
+  .about__title {
+    font-size: 40px;
+  }
+  .about__text {
+    font-size: 16px;
+  }
+  .footer__privacy {
+    font-size: 16px;
+  }
+}
+@media (max-width: 448px) {
+  .main__title:first-child {
+    margin-bottom: 54px;
+  }
+}
+@media (max-width: 400px) {
+  .about__item {
+    grid-column: span 2;
+  }
 }/*# sourceMappingURL=main.css.map */

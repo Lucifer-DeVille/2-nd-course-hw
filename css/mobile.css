@@ -1,0 +1,8 @@
+@media (max-width: 818px) {
+  .main {
+    background-image: url(../img/main-mobi-left.png), url(../img/main-mobi-right.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top 4em left 17em, top -21em right -30em;
+  }
+}/*# sourceMappingURL=mobile.css.map */
