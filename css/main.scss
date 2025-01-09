@@ -32,7 +32,7 @@ input, button, select {
     width: 100%;
     background-color: #E1FF8F;
     height: 800px;
-    background-image: url(../img/main-bg-left.png), url(../img/main-bg-right.png);
+    background-image: url(../img/main-bg-left.svg), url(../img/main-bg-right.svg);
     background-repeat: no-repeat;
     background-size: inherit;
     background-position: top 4em left 6em, top -21em right -30em;
@@ -96,7 +96,7 @@ input, button, select {
 
 .about {
     background-color: #202027;
-    background-image: url(../img/about-bg-left.png), url(../img/about-bg-right.png);
+    background-image: url(../img/about-bg-left.svg), url(../img/about-bg-right.svg);
     background-repeat: no-repeat;
     background-size: initial;
     background-position: bottom 37em left 4em, top 6em right -6em;
@@ -186,6 +186,80 @@ input, button, select {
     &__game-title {
         font-size: 32px;
         font-weight: 700;
+    }
+}
+
+.minigames {
+    background-color: #202027;
+    background-image: url(../img/minigames-bg-top.svg), url(../img/minigames-bg-bottom.svg);
+        background-repeat: no-repeat;
+        background-size: inherit;
+        background-position: top 5rem right 4rem, bottom 3rem right 4rem;
+
+    &__content {
+        padding-top: 46px;
+        padding-bottom: 144px;
+    }
+
+    &__title {
+        @extend .about__title;
+    }
+
+    &__box{
+        margin-top: 72px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    &__item {
+        background: #fff;
+        display: flex;
+        max-width: 1200px;
+        border-radius: 30px;
+        &:nth-child(2n-2) {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        padding: 48px;
+        align-items: flex-start;
+        max-width: 50%;
+    }
+
+    &__name {
+        font-size: 48px;
+       
+    }
+
+    &__descr {
+        font-size: 24px;
+        margin-top: 24px;
+        margin-bottom: 36px;
+    }
+
+    &__btn {
+        width: 247px;
+        height: 55px;
+        background: #000;
+        border-radius: 30px;
+        font-weight: 600;
+        font-size: 24px;
+        color: #fff;
+        transition: all 0.4s;
+        &:hover {
+            color: #000;
+            background: transparent;
+            border: 1px solid #000;
+        }
+    }
+
+    &__img {
+        max-width: 50%;
+        height: auto;
     }
 }
 

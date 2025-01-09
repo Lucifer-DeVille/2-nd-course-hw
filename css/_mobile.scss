@@ -61,6 +61,56 @@
         }
     }
 
+    .minigames {
+        &__content {
+            padding-top: 48px;
+            padding-bottom: 48px;
+        }
+    
+        &__title {
+            @extend .about__title;
+        }
+    
+        &__box{
+            margin-top: 48px;
+            gap: 24px;
+            align-items: center;
+            // overflow: hidden; //
+        }
+    
+        &__item {
+            flex-direction: column-reverse;
+            max-width: 343px;
+            &:nth-child(2n-2) {
+                flex-direction: column-reverse;
+            }
+        }
+    
+        &__info {
+            padding: 29px;
+            max-width: 100%;
+        }
+    
+        &__name {
+            font-size: 32px;
+        }
+    
+        &__descr {
+            font-size: 16px;
+            margin-top: 16px;
+            margin-bottom: 32px;
+        }
+    
+        &__btn {
+            width: 100%;
+            font-size: 16px;
+        }
+    
+        &__img {
+            max-width: 100%;
+        }
+    }
+
     .footer {
         &__privacy {
             font-size: 16px;
