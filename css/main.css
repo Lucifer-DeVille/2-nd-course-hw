@@ -322,6 +322,9 @@ input, button, select {
   .about__text {
     font-size: 16px;
   }
+  .minigames {
+    background-image: none;
+  }
   .minigames__content {
     padding-top: 48px;
     padding-bottom: 48px;
