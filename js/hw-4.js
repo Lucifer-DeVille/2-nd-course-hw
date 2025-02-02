@@ -11,10 +11,7 @@ for(let a=1; a<=5; a++) {
 //Конец
 
 //3-е задание
-for(let b=1; b<=22; b++) {
-    if (b<7) {
-        continue;
-    }
+for(let b=7; b<=22; b++) {
     console.log(b);
 }
 //Конец
@@ -33,12 +30,9 @@ for (const key in obj) {
 //5-е задание
 let num = 0;
 let n = 1000;
-while (n>=1) {
+while (n>=1 && n<50) {
     n /=2
     num++
-    if (n<50) {
-        break;
-    }
     console.log(n, num);
 }
 //Конец
