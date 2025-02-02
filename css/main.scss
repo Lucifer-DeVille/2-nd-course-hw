@@ -18,6 +18,8 @@ input, button, select {
     font: inherit;
     outline: none;
     cursor: pointer;
+    background: transparent;
+    border: 0;
 }
 
 .center {
@@ -26,14 +28,16 @@ input, button, select {
 }
 
 .main {
+    position: relative;
+    overflow: hidden;
     color: #000;
     width: 100%;
     background-color: #E1FF8F;
     height: 800px;
-    background-image: url(../img/main-bg-left.png), url(../img/main-bg-right.png);
+    background-image: url(../img/main-bg-left.svg), url(../img/main-bg-right.svg);
     background-repeat: no-repeat;
     background-size: inherit;
-    background-position: top 4em left 17em, top -21em right -30em;
+    background-position: top 4em left 6em, top -21em right -30em;
 
 
     &__content {
@@ -63,6 +67,7 @@ input, button, select {
         color: #fff;
         font-size: 24px;
         font-weight: 600;
+        display: inline-block;
         padding: 16px 65px 16px 65px;
         border-radius: 30px;
         transition: all 400ms;
@@ -71,17 +76,36 @@ input, button, select {
             color: #000;
         }
     }
+
+    &__scrollbar {
+        background: #BCEC30;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    &__scrollbar-content {
+        display: flex;
+        font-size: 30px;
+        gap: 51px;
+        align-items: center;
+        text-transform: uppercase;
+        width: 5220px;
+        height: 90px;
+    }
 }
 
 .about {
     background-color: #202027;
-    background-image: url(../img/about-bg-left.png), url(../img/about-bg-right.png);
+    background-image: url(../img/about-bg-left.svg), url(../img/about-bg-right.svg);
     background-repeat: no-repeat;
     background-size: initial;
-    background-position: bottom 34em left 15em, top 6em right 6em;
+    background-position: bottom 37em left 4em, top 6em right -6em;
     
     &__content {
         padding-top: 94px;
+        padding-bottom: 50px;
     }
     &__title {
         color: #fff;
@@ -98,34 +122,54 @@ input, button, select {
     &__box {
         display: grid;
         grid-auto-rows: auto;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(6, minmax(1fr, 2fr));
-        gap: 32px;
+        grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(5rem, 1fr));
+        gap: 1.5rem 1rem;
+        justify-items: center;
+        grid-auto-flow: dense;
+        overflow-x: hidden;
     }
+
+    &__link-box {
+        display: block;
+    }
+
     &__item {
         grid-column: span 4 / auto;
         background: #fff;
-        width: 378px;
+        max-width: 378px;
         border-radius: 30px;
+        color: #202027;
         &:nth-child(1) {
-            grid-row: 1 / 3;
+            grid-row: span 7;
+            order: 1;
         }
         &:nth-child(2) {
-            grid-row: 1 / 4;
+            grid-row: span 8;
+            order: 2;
         }
         &:nth-child(3) {
-            grid-row: 1 / 3;
+            grid-row: span 7;
+            order: 3;
         }
         &:nth-child(4) {
-            grid-row: 3 / 6;
+            grid-row: span 8;
+            order: 4;
         }
         &:nth-child(5) {
-            grid-row: 4 / 6;
+            grid-row: span 7;
+            order: 6;
         }
         &:nth-child(6) {
-            grid-row: 3 / 6;
+            grid-row: span 8;
+            order: 5;
         }
     
+    }
+
+    &__img {
+        max-width: 100%;
+        height: auto;
     }
 
     &__info {
@@ -146,3 +190,99 @@ input, button, select {
         font-weight: 700;
     }
 }
+
+.minigames {
+    background-color: #202027;
+    background-image: url(../img/minigames-bg-top.svg), url(../img/minigames-bg-bottom.svg);
+        background-repeat: no-repeat;
+        background-size: inherit;
+        background-position: top 5rem right 4rem, bottom 3rem right 4rem;
+
+    &__content {
+        padding-top: 46px;
+        padding-bottom: 144px;
+    }
+
+    &__title {
+        @extend .about__title;
+    }
+
+    &__box{
+        margin-top: 72px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    &__item {
+        background: #fff;
+        display: flex;
+        max-width: 1200px;
+        border-radius: 30px;
+        &:nth-child(2n-2) {
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        padding: 48px;
+        align-items: flex-start;
+        max-width: 50%;
+    }
+
+    &__name {
+        font-size: 48px;
+       
+    }
+
+    &__descr {
+        font-size: 24px;
+        margin-top: 24px;
+        margin-bottom: 36px;
+    }
+
+    &__btn {
+        width: 247px;
+        height: 55px;
+        background: #000;
+        border-radius: 35px;
+        font-weight: 600;
+        font-size: 24px;
+        color: #fff;
+        border: 1px solid #000;
+        transition: all 0.4s;
+        &:hover {
+            color: #000;
+            background: transparent;
+            
+        }
+    }
+
+    &__img {
+        max-width: 50%;
+        height: auto;
+    }
+}
+
+.footer {
+    background: #BCEC30;
+    height: 150px;
+    padding-top: 61px;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__privacy {
+        font-size: 24px;
+        font-weight: 700;
+        color: #202027
+    }
+}
+
+@import 'tablet';
+@import 'mobile';
